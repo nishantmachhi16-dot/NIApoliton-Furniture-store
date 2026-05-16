@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luxury Interiors | Premium Furniture Store</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#D4AF37", // Gold
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#0A0A0A",
+                        "card-dark": "#171717",
+                        "border-dark": "#262626",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "4px",
+                    },
+                },
+            },
+        };
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-display { font-family: 'Playfair Display', serif; }::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0A0A0A; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #444; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="bg-primary text-black text-center py-2 text-sm font-semibold uppercase tracking-widest">
+        Exclusive Luxury Collection • Free White Glove Delivery
+    </div>
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-border-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex-shrink-0 flex items-center">
+<a href="a1_Home_Page.html" class="text-2xl font-display font-bold tracking-tighter">
+                        NIApoliton <span class="text-primary">Interior</span>
+</a>
+</div>
+<div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-wide">
+<a class="hover:text-primary transition-colors" onclick="document.getElementById('product-grid').scrollIntoView({behavior: 'smooth'})">Living</a>
+<a class="hover:text-primary transition-colors" onclick="document.getElementById('product-grid').scrollIntoView({behavior: 'smooth'})">Sofas</a>
+<a class="hover:text-primary transition-colors" onclick="document.getElementById('product-grid').scrollIntoView({behavior: 'smooth'})">Dining</a>
+<a class="hover:text-primary transition-colors" onclick="document.getElementById('product-grid').scrollIntoView({behavior: 'smooth'})">Bedroom</a>
+<a class="hover:text-primary transition-colors" onclick="document.getElementById('product-grid').scrollIntoView({behavior: 'smooth'})">Decor</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-card-dark rounded-full transition-colors">
+<span class="material-icons-outlined">search</span>
+</button>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-card-dark rounded-full transition-colors">
+<span class="material-icons-outlined">person_outline</span>
+</button>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-card-dark rounded-full transition-colors relative">
+<span class="material-icons-outlined">shopping_bag</span>
+<span class="cart-badge absolute top-1 right-1 bg-primary text-[10px] text-black w-4 h-4 flex items-center justify-center rounded-full font-bold">0</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
+<nav aria-label="Breadcrumb" class="flex text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">
+<ol class="flex items-center space-x-2">
+<li><a class="hover:text-primary" href="a1_Home_Page.html">Home</a></li>
+<li><span class="material-icons-outlined text-sm">chevron_right</span></li>
+<li><a class="hover:text-primary" href="a2_Product_List.html">Living Room</a></li>
+<li><span class="material-icons-outlined text-sm">chevron_right</span></li>
+<li class="text-primary font-semibold">Luxury Interior</li>
+</ol>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="text-4xl md:text-5xl font-display font-bold mb-2">Luxury Interior</h1>
+<p class="text-slate-500 dark:text-slate-400 max-w-2xl">
+                    Discover our curated selection of premium seating, where timeless craftsmanship meets modern sophistication. Each piece is designed for unparalleled comfort and aesthetic appeal.
+                </p>
+</div>
+<div class="flex items-center space-x-4">
+<span class="text-sm font-medium text-slate-500">Sort By:</span>
+<select id="sort-select" class="bg-transparent border-slate-200 dark:border-border-dark text-sm rounded-md focus:ring-primary focus:border-primary py-2 pr-8">
+<option>Popularity</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Newest Arrivals</option>
+</select>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+<div class="flex flex-col lg:flex-row gap-8">
+<aside class="w-full lg:w-64 flex-shrink-0">
+<div class="sticky top-28 space-y-8">
+<div>
+<h3 class="text-sm font-bold uppercase tracking-widest mb-4 border-b border-slate-200 dark:border-border-dark pb-2">Filter By</h3>
+<div class="mb-6">
+<label class="block text-xs font-semibold uppercase mb-3">Price Range</label>
+<div class="space-y-2">
+<label class="flex items-center space-x-3 text-sm cursor-pointer">
+<input class="price-filter rounded border-slate-300 dark:border-border-dark text-primary focus:ring-primary bg-transparent" type="checkbox" data-range="under1000"/>
+<span>Under $1,000</span>
+</label>
+<label class="flex items-center space-x-3 text-sm cursor-pointer">
+<input class="price-filter rounded border-slate-300 dark:border-border-dark text-primary focus:ring-primary bg-transparent" type="checkbox" data-range="1000-2500"/>
+<span>$1,000 - $2,500</span>
+</label>
+<label class="flex items-center space-x-3 text-sm cursor-pointer">
+<input class="price-filter rounded border-slate-300 dark:border-border-dark text-primary focus:ring-primary bg-transparent" type="checkbox" data-range="2500-5000"/>
+<span>$2,500 - $5,000</span>
+</label>
+<label class="flex items-center space-x-3 text-sm cursor-pointer">
+<input class="price-filter rounded border-slate-300 dark:border-border-dark text-primary focus:ring-primary bg-transparent" type="checkbox" data-range="5000plus"/>
+<span>$5,000+</span>
+</label>
+</div>
+</div>
+<div class="mb-6">
+<label class="block text-xs font-semibold uppercase mb-3">Seating</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="seating-btn px-2 py-2 text-xs border border-slate-200 dark:border-border-dark hover:border-primary transition-colors rounded" data-seats="1">1 Seater</button>
+<button class="seating-btn px-2 py-2 text-xs border border-slate-200 dark:border-border-dark hover:border-primary transition-colors rounded" data-seats="2">2 Seater</button>
+<button class="seating-btn px-2 py-2 text-xs border border-slate-200 dark:border-border-dark hover:border-primary transition-colors rounded" data-seats="3">3 Seater</button>
+<button class="seating-btn px-2 py-2 text-xs border border-slate-200 dark:border-border-dark hover:border-primary transition-colors rounded" data-seats="4">4 Seater</button>
+<button class="seating-btn px-2 py-2 text-xs border border-slate-200 dark:border-border-dark hover:border-primary transition-colors rounded" data-seats="5">L-Shape</button>
+</div>
+</div>
+<div class="mb-6">
+<label class="block text-xs font-semibold uppercase mb-3">Material</label>
+<div class="space-y-2">
+<label class="flex items-center space-x-3 text-sm cursor-pointer">
+<input class="material-filter rounded border-slate-300 dark:border-border-dark text-primary focus:ring-primary bg-transparent" type="checkbox" data-material="leather"/>
+<span>Premium Leather</span>
+</label>
+<label class="flex items-center space-x-3 text-sm cursor-pointer">
+<input class="material-filter rounded border-slate-300 dark:border-border-dark text-primary focus:ring-primary bg-transparent" type="checkbox" data-material="velvet"/>
+<span>Italian Velvet</span>
+</label>
+<label class="flex items-center space-x-3 text-sm cursor-pointer">
+<input class="material-filter rounded border-slate-300 dark:border-border-dark text-primary focus:ring-primary bg-transparent" type="checkbox" data-material="linen"/>
+<span>Performance Linen</span>
+</label>
+</div>
+</div>
+<div class="mb-6">
+<label class="block text-xs font-semibold uppercase mb-3">Color Palette</label>
+<div class="flex flex-wrap gap-3">
+<button class="color-btn w-6 h-6 rounded-full bg-black" data-color="charcoal" title="Charcoal"></button>
+<button class="color-btn w-6 h-6 rounded-full bg-emerald-900" data-color="emerald" title="Emerald"></button>
+<button class="color-btn w-6 h-6 rounded-full bg-amber-800" data-color="brown" title="Brown"></button>
+<button class="color-btn w-6 h-6 rounded-full bg-stone-300" data-color="stone" title="Stone"></button>
+<button class="color-btn w-6 h-6 rounded-full bg-blue-900" data-color="navy" title="Navy"></button>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<div class="flex-1">
+<div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-10">
+<div class="group">
+<div class="relative overflow-hidden bg-slate-100 dark:bg-card-dark aspect-[4/5] mb-4">
+<img alt="Everett Mid-Century Sofa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR5g4y03E0VoENWtnPcLGvJJOyL-juXkDmbpkcSm5Vy_zjAevri7a5VRPZ6HBME3fMoButbJEYCONJW2MlBtpMcSShQqwIjuAvIT739ddTJ0sL5wbyHvkBxkmd2v7nQSQGDBW9PasW2OCelCE0IORm88mTKGAjhigAgUpeeCAjQUbRHEga1LQ9C4bSnVbHtyhyxuxst8o9d9zzCJ5gLRjZ3_dzKS08Gzhj_zj-gvUVArFE9ST2ht03-hQuPDJopEPlAd6e6vIVEx4"/>
+<button class="absolute top-4 right-4 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-icons-outlined text-xl">favorite_border</span>
+</button>
+<div class="absolute top-4 left-4 bg-primary text-black px-2 py-1 text-[10px] font-bold">Up to 70% Off</div>
+<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform bg-primary text-black font-bold text-center cursor-pointer">
+                                VIEW DETAILS
+                            </div>
+</div>
+<h3 class="font-display text-lg font-bold mb-1">Everett Mid-Century Beds</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-tighter">Dimensions: 84"W x 36"D x 35"H</p>
+<div class="flex items-center space-x-2">
+<span class="text-primary font-bold text-lg">$1,899</span>
+<span class="text-slate-400 line-through text-sm">$2,450</span>
+</div>
+</div>
+<div class="group">
+<div class="relative overflow-hidden bg-slate-100 dark:bg-card-dark aspect-[4/5] mb-4">
+<img alt="Camden Velvet Dining" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKGVMTCBLtxL_al0lfXXM2kjJQIpJmtqHC0Dfz5x04mt_yYLMOIsz43E2rqgyjeRxr8LW75Q7mkxz6dQoXCf_KlvP8xG62pIbGRt6jAUxVOl84bdb2JDsJ6nE_-y14_WCz0Vxfpk9AhWhT8_lT2o-Zvw_vfGCGF89NVV2OUGzcRn0MXSNYgHWXkIeAfOMgsF116nm5BIQssCTDtrf56Ae_Xv8gqftOqw_H0fB8yl0cBzPIQgw8EM6wr8xaIjIK6r2qHYI5cEJ9A-Q"/>
+<button class="absolute top-4 right-4 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-icons-outlined text-xl text-primary">favorite</span>
+</button>
+<div class="absolute top-4 left-4 bg-primary text-black px-2 py-1 text-[10px] font-bold">BESTSELLER</div>
+<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform bg-primary text-black font-bold text-center cursor-pointer">
+                                VIEW DETAILS
+                            </div>
+</div>
+<h3 class="font-display text-lg font-bold mb-1">Camden Velvet TV Units</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-tighter">Dimensions: 90"W x 38"D x 30"H</p>
+<div class="flex items-center space-x-2">
+<span class="text-primary font-bold text-lg">$2,250</span>
+<span class="text-slate-400 line-through text-sm">$3,100</span>
+</div>
+</div>
+<div class="group">
+<div class="relative overflow-hidden bg-slate-100 dark:bg-card-dark aspect-[4/5] mb-4">
+<img alt="Aurelius Leather Sofa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPYNhDMB2VLtedzZkfbjyFkC1TFXHVT3vdD4pTt7V_8ZzDfQnHlO1PdmkMLBZ4OzRE2CUGg1VbSTlBOEeeBpcJ4Y7l0dlPCHBoGHoNoosuz-Tx0kP-T9ypu0UYsIMm5LOGfB4kS_5MrLd5VdwEfoTuGX2-QztI40PEHLwbrS3xJkAy7xarH1wcMNfM55-wH8iLoiqol692v0D4J89-JuORrucCnzn9VH-V2wDG98V478xLiKxxmclnvsvg7BBp7YP-LBAuMwympZI"/>
+<button class="absolute top-4 right-4 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-icons-outlined text-xl">favorite_border</span>
+</button>
+<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform bg-primary text-black font-bold text-center cursor-pointer">
+                                VIEW DETAILS
+                            </div>
+</div>
+<h3 class="font-display text-lg font-bold mb-1">Aurelius Cognac Leather Sofa</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-tighter">Dimensions: 88"W x 40"D x 34"H</p>
+<div class="flex items-center space-x-2">
+<span class="text-primary font-bold text-lg">$4,599</span>
+<span class="text-slate-400 line-through text-sm">$5,200</span>
+</div>
+</div>
+<div class="group">
+<div class="relative overflow-hidden bg-slate-100 dark:bg-card-dark aspect-[4/5] mb-4">
+<img alt="Palazzo Sectional" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD087J_U1ifRl6im0X6f9zfRoWReE3kE8NjA0pYirR7wXjVzDRDHMbV1qNbsmyvQOQB81B61vG2zKulWg2ieUtDH0jzk6EivdrVDMwRtnm3QbfvbRIa0hntVGpoFkgl5E3qghUg1jUSAR-oJftWD7ub-qr-B67NCj8ZP3Rmg_i-zkCe7n-JBmUuflpLgPgef2KOFKU008aP72iAwJjMfKk8xg9qWPnLpyYT1OgqPm7K-GDPyAku7luj6gpqy6oOnujhQtmUaiAmfXw"/>
+<button class="absolute top-4 right-4 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-icons-outlined text-xl">favorite_border</span>
+</button>
+<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform bg-primary text-black font-bold text-center cursor-pointer">
+                                VIEW DETAILS
+                            </div>
+</div>
+<h3 class="font-display text-lg font-bold mb-1">Palazzo Modular Dining</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-tighter">Dimensions: 110"W x 68"D x 32"H</p>
+<div class="flex items-center space-x-2">
+<span class="text-primary font-bold text-lg">$5,800</span>
+<span class="text-slate-400 line-through text-sm">$6,500</span>
+</div>
+</div>
+<div class="group">
+<div class="relative overflow-hidden bg-slate-100 dark:bg-card-dark aspect-[4/5] mb-4">
+<img alt="Sloane Curved Sofa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNFRhx_MSa8Xu9lsKTheXkvW8DS4U2JKWNHg_niOPpnbMSKNhwH11eWBwcMU1wuKnSxSn050mouky0Yxcap0QiSvqXO6fq9a9_vfqiqwDMVlZxl2urVaYi2ZigSUGh-XQ3RNjSygKvNqp4p_EV7jOqnFqWc_UcZzTVCI86yFSNjiYHQlMDNJBiDB7K6bOGWwruSx9LmIsdokJLaSwfidMK23Ppfnnjv8zODiJH6zOBZFWnqudyyvV2_itWOddmnNwAOSDla-MpVZw"/>
+<button class="absolute top-4 right-4 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-icons-outlined text-xl">favorite_border</span>
+</button>
+<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform bg-primary text-black font-bold text-center cursor-pointer">
+                                VIEW DETAILS
+                            </div>
+</div>
+<h3 class="font-display text-lg font-bold mb-1">Sloane Ivory Curved Decor</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-tighter">Dimensions: 96"W x 42"D x 31"H</p>
+<div class="flex items-center space-x-2">
+<span class="text-primary font-bold text-lg">$3,999</span>
+<span class="text-slate-400 line-through text-sm">$4,800</span>
+</div>
+</div>
+<div class="group">
+<div class="relative overflow-hidden bg-slate-100 dark:bg-card-dark aspect-[4/5] mb-4">
+<img alt="Vera Emerald Sofa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvG2wb_merwu9JVmLrlWDryUPYimaHhiBg2wLnP8gCpsQWXVS4AvGDczt9U5zf9ZjXOXzoxT83I8o47yc62FIOXjUw8_UtpHUdo5BXs3CwCdvV2J0htVwp9wEeMTNuYuNp3wxMt0urmkg6cQleUNAqPx8g8DE8GSZvS2qAUHFFtaqLFKy13RwA5Azh0QRdierBt859WZPldR7jIR9lMhgi-Z7DLgISkd1luLaZ1ZFzMuejdNlu6IDE38Mh29yfuUrAdR5LHxfMwaw"/>
+<button class="absolute top-4 right-4 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-icons-outlined text-xl">favorite_border</span>
+</button>
+<div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform bg-primary text-black font-bold text-center cursor-pointer">
+                                VIEW DETAILS
+                            </div>
+</div>
+<h3 class="font-display text-lg font-bold mb-1">Vera Emerald Velvet Lighting</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-tighter">Dimensions: 82"W x 34"D x 33"H</p>
+<div class="flex items-center space-x-2">
+<span class="text-primary font-bold text-lg">$2,450</span>
+<span class="text-slate-400 line-through text-sm">$2,900</span>
+</div>
+</div>
+</div>
+<div id="pagination" class="mt-20 flex justify-center items-center space-x-4"></div>
+</div>
+</div>
+</main>
+<footer class="bg-white dark:bg-card-dark border-t border-slate-200 dark:border-border-dark pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<div>
+<span class="text-2xl font-display font-bold tracking-tighter mb-6 block">
+                        NIApoliton<span class="text-primary">LUXE</span>
+</span>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                        Crafting exceptional furniture for the modern connoisseur. Quality materials, ethical sourcing, and timeless design in every piece.
+                    </p>
+<div class="flex space-x-4">
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-background-dark hover:bg-primary hover:text-black transition-all" href="#">
+<span class="material-icons-outlined text-sm">facebook</span>
+</a>
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-background-dark hover:bg-primary hover:text-black transition-all" href="#">
+<span class="material-icons-outlined text-sm">camera_alt</span>
+</a>
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-background-dark hover:bg-primary hover:text-black transition-all" href="#">
+<span class="material-icons-outlined text-sm">alternate_email</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest mb-6">Explore</h4>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">New Arrivals</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Best Sellers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Limited Edition</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Showrooms</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest mb-6">Service</h4>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Order Tracking</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Furniture Care</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Gift Cards</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest mb-6">Newsletter</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Join our elite circle for early access and design inspiration.</p>
+<div class="flex">
+<input class="bg-slate-50 dark:bg-background-dark border-slate-200 dark:border-border-dark text-sm flex-1 focus:ring-primary focus:border-primary" placeholder="Email Address" type="email"/>
+<button class="bg-primary text-black px-4 py-2 font-bold hover:bg-white border border-primary transition-colors">JOIN</button>
+</div>
+</div>
+</div>
+<div class="border-t border-slate-100 dark:border-border-dark pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-slate-400">© 2024 Ultraluxe Furniture. All rights reserved.</p>
+<div class="flex space-x-6 text-xs text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Use</a>
+<a class="hover:text-primary transition-colors" href="#">Accessibility</a>
+</div>
+</div>
+</div>
+</footer>
+<button id="theme-toggle-btn" class="fixed bottom-8 right-8 w-12 h-12 bg-white dark:bg-card-dark shadow-2xl rounded-full flex items-center justify-center border border-slate-200 dark:border-border-dark z-50 hover:scale-110 transition-transform">
+<span class="material-icons-outlined dark:hidden">dark_mode</span>
+<span class="material-icons-outlined hidden dark:block text-primary">light_mode</span>
+</button>
+<script src="js/productList.js"></script>
+</body></html>
