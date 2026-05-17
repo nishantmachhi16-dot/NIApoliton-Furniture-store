@@ -5,6 +5,9 @@
 <title>Luxury Interiors | Premium Furniture Store</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link rel="icon" type="image/png" href="./NIApoliton_furniture_store.png">
+
+        
 <script>
         tailwind.config = {
             darkMode: "class",
@@ -37,7 +40,7 @@
         ::-webkit-scrollbar-thumb:hover { background: #444; }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<body id="back-to-top" class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
 <div class="bg-primary text-black text-center py-2 text-sm font-semibold uppercase tracking-widest">
         Exclusive Luxury Collection • Free White Glove Delivery
     </div>
@@ -281,9 +284,13 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 <div>
+<button 
+onclick="document.getElementById('back-to-top').scrollIntoView({behavior:'smooth'})" style="outline: none;">                            
 <span class="text-2xl font-display font-bold tracking-tighter mb-6 block">
                         NIApoliton<span class="text-primary">LUXE</span>
-</span>
+</span>                        
+</button>
+
 <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
                         Crafting exceptional furniture for the modern connoisseur. Quality materials, ethical sourcing, and timeless design in every piece.
                     </p>
