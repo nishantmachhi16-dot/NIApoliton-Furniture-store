@@ -54,14 +54,14 @@
         }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans selection:bg-primary/30">
+<body id="back-to-top" class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans selection:bg-primary/30">
 <div class="bg-neutral-900 text-[10px] uppercase tracking-widest py-2 text-center text-primary border-b border-primary/20">
         Free White Glove Delivery on Orders Over $2,500 | Shop the Astra Collection
     </div>
 <header class="sticky top-0 z-50 bg-background-light dark:bg-background-dark/95 border-b border-neutral-200 dark:border-neutral-800 backdrop-blur-md">
 <div class="container mx-auto px-6 h-20 flex items-center justify-between">
 <div class="flex items-center gap-8">
-<a class="text-2xl font-display font-black tracking-tighter text-primary" href="a1_Home_Page.html">NIApoliton<br> Interior</a>
+<a class="text-2xl font-display font-black tracking-tighter text-primary" href="./index.html">NIApoliton<br> Interior</a>
 <nav class="hidden lg:flex items-center gap-6 text-sm font-medium uppercase tracking-wide">
 <a class="hover:text-primary transition-colors" href="a2_Product_List.html?category=decor">Home Decor</a>
 <a class="hover:text-primary transition-colors" href="a2_Product_List.html">Business Interiors</a>
@@ -309,7 +309,10 @@
 <div class="container mx-auto px-6">
 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 mb-24">
 <div class="col-span-2">
-<a class="text-4xl font-display font-black tracking-tighter text-primary mb-8 block" href="bg-background-light">NIApoliton</br>Interiors</a>
+<button 
+onclick="document.getElementById('back-to-top').scrollIntoView({behavior:'smooth'})" style="outline: none;">
+<span class="text-4xl font-display font-black tracking-tighter text-primary mb-8 block" href="back-to-top">NIApoliton</br>Interiors</span>
+</button>
 <p class="text-neutral-500 dark:text-neutral-400 mb-8 max-w-sm">Experience the pinnacle of interior design. Our curated collections bring together modern elegance and timeless craftsmanship.</p>
 <div class="flex gap-4">
 <a class="w-10 h-10 rounded-full border border-neutral-200 dark:border-neutral-800 flex items-center justify-center hover:bg-primary hover:text-black transition-all" href="#">
