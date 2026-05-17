@@ -115,7 +115,6 @@
   if (buyNowBtn) {
     buyNowBtn.addEventListener("click", () => {
       const productName = document.querySelector("h1")?.textContent?.trim() || "Sofa";
-      buyNowBtn.textContent = "PROCESSING...";
       setTimeout(() => {
         window.location.href = `a5_consuktancy_page.html?interest=${encodeURIComponent(productName)}`;
       }, 1500);
