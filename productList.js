@@ -149,7 +149,6 @@
         };
         const pageName = pageMap[id];
         if (pageName) {
-          btn.textContent = "LOADING...";
           setTimeout(() => {
             window.location.href = pageName;
           }, 1000);
