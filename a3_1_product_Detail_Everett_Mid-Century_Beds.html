@@ -6,7 +6,10 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<script>
+
+<link rel="icon" type="image/png" href="./NIApoliton_furniture_store.png">
+
+        <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -39,15 +42,15 @@
         }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300">
+<body id="back-to-top" class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300">
 <header class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
 <nav class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
 <div class="flex items-center gap-8">
-<a class="text-2xl font-display font-bold tracking-tighter text-primary" href="a1_Home_Page.html">URBAN LUXE</a>
+<a class="text-2xl font-display font-bold tracking-tighter text-primary" href="a1_Home_Page.html">NIApolitonLUXE</a>
 <div class="hidden md:flex gap-6 text-sm font-medium uppercase tracking-widest">
 <a class="hover:text-primary transition-colors" href="a2_Product_List.html">Living</a>
-<a class="hover:text-primary transition-colors" href="a2_Product_List.html?category=beds">Bedroom</a>
-<a class="hover:text-primary transition-colors" href="a2_Product_List.html?category=dining">Dining</a>
+<a class="hover:text-primary transition-colors" href="a2_Product_List.html">Bedroom</a>
+<a class="hover:text-primary transition-colors" href="a2_Product_List.html">Dining</a>
 <a class="hover:text-primary transition-colors" href="a5_consuktancy_page.html">Office</a>
 </div>
 </div>
@@ -302,7 +305,10 @@
 <footer class="mt-32 bg-slate-900 text-slate-400 py-16 px-4 border-t border-slate-800">
 <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12">
 <div class="col-span-2 lg:col-span-2">
-<a class="text-2xl font-display font-bold text-primary mb-6 block" href="#">URBAN LUXE</a>
+<button 
+onclick="document.getElementById('back-to-top').scrollIntoView({behavior:'smooth'})" style="outline: none;">
+<span class="text-2xl font-display font-bold text-primary mb-6 block">NIApolitonLUXE</span>
+</button>
 <p class="text-sm leading-relaxed mb-6 max-w-sm italic">
                     Curating timeless furniture pieces that blend modern aesthetics with unparalleled comfort. Your home deserves the touch of elegance.
                 </p>
