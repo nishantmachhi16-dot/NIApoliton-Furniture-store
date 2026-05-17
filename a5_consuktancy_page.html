@@ -8,6 +8,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+
+<link rel="icon" type="image/png" href="./NIApoliton_furniture_store.png">
+
 <script>
         tailwind.config = {
             darkMode: "class",
@@ -42,11 +45,11 @@
         }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-sans selection:bg-primary selection:text-black">
+<body id="back-to-top" class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-sans selection:bg-primary selection:text-black">
 <header class="fixed w-full z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-slate-200 dark:border-white/10">
 <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
 <div class="flex items-center gap-2">
-<a href="a1_Home_Page.html" class="text-2xl font-display font-bold text-slate-900 dark:text-white tracking-tight"><span class="text-primary">NIApoliton</span> Interior</a>
+<a href="./index.html" class="text-2xl font-display font-bold text-slate-900 dark:text-white tracking-tight"><span class="text-primary">NIApoliton</span> Interior</a>
 </div>
 <nav class="hidden md:flex items-center gap-8">
 <a class="text-sm font-medium hover:text-primary transition-colors" href="a2_Product_List.html">Living</a>
@@ -259,7 +262,10 @@
 <div class="max-w-7xl mx-auto px-4">
 <div class="grid md:grid-cols-4 gap-12 mb-16">
 <div class="space-y-6">
+<button 
+onclick="document.getElementById('back-to-top').scrollIntoView({behavior:'smooth'})" style="outline: none;">
 <span class="text-2xl font-display font-bold text-slate-900 dark:text-white tracking-tight">NIApoliton<span class="text-primary">Interior</span></span>
+</button>
 <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
                         Redefining modern living through exceptional design and premium craftsmanship.
                     </p>
