@@ -5,6 +5,28 @@
 (function () {
   "use strict";
 
+   
+  /* ── 0. PRELOADER ───────────────────────────────── */
+  // Prevent scrolling while loading
+  document.body.style.overflow = "hidden";
+
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("ww-preloader");
+    if (preloader) {
+      // Smooth fade out
+      preloader.style.opacity = "0";
+      preloader.style.visibility = "hidden";
+
+      // Remove from DOM and restore scrolling after transition
+      setTimeout(() => {
+        preloader.remove();
+        document.body.style.overflow = "";
+      }, 1000);
+    } else {
+      document.body.style.overflow = "";
+    }
+  });
+   
   /* ── 1. DARK-MODE PERSISTENCE ───────────────────── */
   const html = document.documentElement;
 
